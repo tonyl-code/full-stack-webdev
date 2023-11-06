@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Notebook</title>
+    <style>
+        .purple-class {color: rgb(144, 0, 255);}
+        .center {
+            text-align: center;
+            align-items: center;
+        }
+        .border {
+            border-style: solid;
+            border-color: purple;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('#req').onsubmit = function() {
+                alert("Requested!");
+            }
+            document.querySelector('#borrow').onsubmit = function() {
+                alert("Submitted!");
+            }
+        });
+    </script>
+</head>
+<body>
+    <header class="center">
+        Library
+    </header>
+
+    <section class="center border">
+        <p>Get Book Registrations</p>
+        <form id = "req" action="/get-reg" method="post" 
+            class="purple-class center">
+            <input type="text" placeholder="Name" name="new_user">
+            <button type="submit">Submit</button>
+        </form>
+
+        <p>Borrow a book</p>
+        <form id = "borrow" action="/add-book" method="post" class=
+            "purple-class center">
+            <input type="text" placeholder="Name" name="old_user">
+            <input type="text" placeholder="Book" name="book"> 
+            <input type="text" placeholder="Due Date" name="due">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>
