@@ -6,4 +6,4 @@ This is a Full stack project for practice. The back end is built with Flask and 
 
 I hope to add more features to this project in the future, including:
 * Using React to make website more user friendly
-* Expand back end code to allow for more complex uses
+* Expand back end code to allow for more complex uses including: Log in system & security
